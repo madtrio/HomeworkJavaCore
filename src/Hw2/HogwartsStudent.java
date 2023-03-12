@@ -70,4 +70,7 @@ public abstract class HogwartsStudent {
     public String toString() {
         return String.format("Студент %s: сила магии: %d, расстояние трансгрессии: %d", name, magicPower, transgressionRange);
     }
+    public void print(){
+        System.out.println(this);
+    }
 }

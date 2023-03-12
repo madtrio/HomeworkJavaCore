@@ -25,6 +25,7 @@ public class Main {
         studentRav[1].print();
         studentRav[1].checkRav(studentRav[2]);
         studentHuff[1].checkHuff(studentHuff[2]);
+        studentHuff[1].checkHog(studentRav[2]);
     }
 
 }

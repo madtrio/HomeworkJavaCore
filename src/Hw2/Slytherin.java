@@ -1,6 +1,6 @@
 package Hw2;
 
-public class Slytherin extends Hogwarts {
+public class Slytherin extends HogwartsStudent {
     private int cunning;
     private int readiness;
     private int ambitions;
@@ -53,5 +53,32 @@ public class Slytherin extends Hogwarts {
 
     public void setPower(int power) {
         this.power = power;
+    }
+    private int ability() {
+        return cunning + power + nahod + ambitions;
+    }
+
+    public void checkSly(Slytherin slytherin) {
+        int ability1 = ability();
+        int ability2 = slytherin.ability();
+        if (ability1 > ability2) {
+            System.out.printf("Студент Слизерина %s лучше, чем студент Слизерина %s: %d и %d%n",
+                    getName(),
+                    slytherin.getName(),
+                    ability1,
+                    ability2);
+        } else if (ability1 < ability2) {
+            System.out.printf("Студент Слизерина %s лучше, чем студент Слизерина %s: %d и %d%n",
+                    slytherin.getName(),
+                    getName(),
+                    ability2,
+                    ability1);
+        } else {
+            System.out.printf("Студент Слизерина %s такой же как и студент Слизерина %s: %d и %d%n",
+                    slytherin.getName(),
+                    getName(),
+                    ability2,
+                    ability1);
+        }
     }
 }

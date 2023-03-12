@@ -8,7 +8,7 @@ public abstract class HogwartsStudent {
     private int magicPower;
     private int transgressionRange;
 
-    public HogwartsStudent (String name, int magicPower, int transgressionRange) {
+    public HogwartsStudent(String name, int magicPower, int transgressionRange) {
         this.name = name;
         this.magicPower = magicPower;
         this.transgressionRange = transgressionRange;
@@ -46,11 +46,23 @@ public abstract class HogwartsStudent {
         int ability1 = ability();
         int ability2 = hogwartsStudent.ability();
         if (ability1 > ability2) {
-            System.out.printf("Студент %s лучше, чем студент %s: %d и %d%n", getName(), hogwartsStudent.getName(), ability1, ability2);
+            System.out.printf("Студент %s лучше, чем студент %s: %d и %d%n",
+                    getName(),
+                    hogwartsStudent.getName(),
+                    ability1,
+                    ability2);
         } else if (ability1 < ability2) {
-            System.out.printf("Студент %s лучше, чем студент %s: %d и %d%n", hogwartsStudent.getName(), getName(), ability2, ability1);
+            System.out.printf("Студент %s лучше, чем студент %s: %d и %d%n",
+                    hogwartsStudent.getName(),
+                    getName(),
+                    ability2,
+                    ability1);
         } else {
-            System.out.printf("Студент %s такой же как и студент %s: %d и %d%n", hogwartsStudent.getName(), getName(), ability2, ability1);
+            System.out.printf("Студент %s такой же как и студент %s: %d и %d%n",
+                    hogwartsStudent.getName(),
+                    getName(),
+                    ability2,
+                    ability1);
         }
     }
 }

@@ -1,6 +1,6 @@
 package Hw2;
 
-public class Ravenclaw extends Hogwarts {
+public class Ravenclaw extends HogwartsStudent {
     private int smartness;
     private int wiseness;
     private int quickwitted;
@@ -44,5 +44,32 @@ public class Ravenclaw extends Hogwarts {
 
     public void setCreativeness(int creativeness) {
         this.creativeness = creativeness;
+    }
+    private int ability() {
+        return smartness + creativeness + quickwitted + wiseness;
+    }
+
+    public void checkRav(Ravenclaw ravenclaw) {
+        int ability1 = ability();
+        int ability2 = ravenclaw.ability();
+        if (ability1 > ability2) {
+            System.out.printf("Студент Когтеврана %s лучше, чем студент Когтеврана %s: %d и %d%n",
+                    getName(),
+                    ravenclaw.getName(),
+                    ability1,
+                    ability2);
+        } else if (ability1 < ability2) {
+            System.out.printf("Студент Когтеврана %s лучше, чем студент Когтеврана %s: %d и %d%n",
+                    ravenclaw.getName(),
+                    getName(),
+                    ability2,
+                    ability1);
+        } else {
+            System.out.printf("Студент Когтеврана %s такой же как и студент Когтеврана %s: %d и %d%n",
+                    ravenclaw.getName(),
+                    getName(),
+                    ability2,
+                    ability1);
+        }
     }
 }

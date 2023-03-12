@@ -6,7 +6,8 @@ public class Ravenclaw extends HogwartsStudent {
     private int quickwitted;
 
     private int creativeness;
-    public Ravenclaw (String name, int magicPower, int transgressionRange, int smartness, int wiseness, int quickwitted, int creativeness) {
+
+    public Ravenclaw(String name, int magicPower, int transgressionRange, int smartness, int wiseness, int quickwitted, int creativeness) {
         super(name, magicPower, transgressionRange);
         this.smartness = smartness;
         this.wiseness = wiseness;
@@ -45,6 +46,7 @@ public class Ravenclaw extends HogwartsStudent {
     public void setCreativeness(int creativeness) {
         this.creativeness = creativeness;
     }
+
     private int ability() {
         return smartness + creativeness + quickwitted + wiseness;
     }
@@ -71,5 +73,9 @@ public class Ravenclaw extends HogwartsStudent {
                     ability2,
                     ability1);
         }
+    }
+
+    public String toString() {
+        return String.format("%s, когтевранец; ум: %d, мудрость: %d, остроумие: %d, креативность: %d", super.toString(), smartness, wiseness, quickwitted, creativeness);
     }
 }

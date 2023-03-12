@@ -63,4 +63,9 @@ public class Gryffindor extends HogwartsStudent {
                     ability1);
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s, гриффиндорец; благородство: %d, честь: %d, храбрость: %d", super.toString(), blago, chest, bravery);
     }
+}

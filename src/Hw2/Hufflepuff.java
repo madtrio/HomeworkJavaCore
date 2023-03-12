@@ -61,4 +61,7 @@ public class Hufflepuff extends HogwartsStudent {
                     ability1);
         }
     }
+    public String toString() {
+        return String.format("%s, пуффендуец; трудолюбие: %d, верность: %d, честность: %d", super.toString(), hardworking, loyal, honest);
+    }
 }

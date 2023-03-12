@@ -65,4 +65,9 @@ public abstract class HogwartsStudent {
                     ability1);
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("Студент %s: сила магии: %d, расстояние трансгрессии: %d", name, magicPower, transgressionRange);
+    }
 }

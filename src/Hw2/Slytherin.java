@@ -81,4 +81,7 @@ public class Slytherin extends HogwartsStudent {
                     ability1);
         }
     }
+    public String toString() {
+        return String.format("%s, слизеринец; хитрость: %d, решительность: %d, амбициозность: %d, находчивость : %d, жажда власти: %d", super.toString(), cunning, readiness, ambitions, nahod, power);
+    }
 }

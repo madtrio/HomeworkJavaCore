@@ -1,6 +1,6 @@
 package Hw3;
 
-public class WheeledTrans {
+public abstract class WheeledTrans {
     private String modelName;
     private int wheelsCount;
 
@@ -23,5 +23,13 @@ public class WheeledTrans {
 
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
+    }
+    public abstract void updateTyre();
+
+    public void checkWheels(){
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
+        }
     }
 }

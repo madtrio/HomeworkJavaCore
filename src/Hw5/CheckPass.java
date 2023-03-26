@@ -10,7 +10,10 @@ public class CheckPass {
         try {
             check(login, password, confirmPass);
             return true;
-        } catch (WrongLoginException | WrongPasswordException e) {
+        } catch (WrongLoginException e) {
+            System.out.println((e.getMessage()));
+            return false;
+        } catch (WrongPasswordException e) {
             System.out.println((e.getMessage()));
             return false;
         }

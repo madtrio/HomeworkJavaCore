@@ -12,6 +12,7 @@ public class Main {
         task1(nums);
         task2(nums);
         task3(List.of("test", "test", "test", "test", "TEST", "tes"));
+        task4(List.of("test", "test", "test", "test", "TEST", "tes"));
     }
     public static void task1(List<Integer> nums) {
         System.out.println("Задача 1");
@@ -40,6 +41,18 @@ public class Main {
             }
         }
         System.out.println();
+    }
+    public static void task4(List<String> words) {
+        System.out.println("Задача 4");
+        Map<String, Integer> map = new TreeMap<>();
+        for (String word : words) {
+            if (!map.containsKey(word)) {
+                map.put(word,1);
+            } else {
+                map.replace(word, map.get(word) +1);
+            }
+        }
+        System.out.println(map);
     }
     private static List<Integer> generateInts (int n) {
         List <Integer> list = new ArrayList<>(n);
